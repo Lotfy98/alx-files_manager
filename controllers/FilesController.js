@@ -259,10 +259,10 @@ export default class FilesController {
   }
 
   /**
-   * Retrieves the content of a file.
-   * @param {Request} req The Express request object.
-   * @param {Response} res The Express response object.
-   */
+  * Retrieves the content of a file.
+  * @param {Request} req The Express request object.
+  * @param {Response} res The Express response object.
+  */
   static async getFile(req, res) {
     const user = await getUserFromXToken(req);
     const { id } = req.params;

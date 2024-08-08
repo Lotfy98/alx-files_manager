@@ -57,14 +57,6 @@ class RedisClient {
   async del(key) {
     await promisify(this.client.DEL).bind(this.client)(key);
   }
-
-  /**
-   * Closes the Redis client connection.
-   * @returns {Promise<void>}
-   */
-  async close() {
-    await promisify(this.client.QUIT).bind(this.client)();
-  }
 }
 
 export const redisClient = new RedisClient();
